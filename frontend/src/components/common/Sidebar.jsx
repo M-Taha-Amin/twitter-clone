@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 import { BiLogOut } from 'react-icons/bi';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 
-
 const Sidebar = () => {
   const queryClient = useQueryClient();
   const { data: user } = useQuery({ queryKey: ['getAuthUser'] });
@@ -62,7 +61,7 @@ const Sidebar = () => {
               className="flex gap-2 items-center hover:bg-stone-900 transition-all rounded-full duration-300 py-2 pl-2 pr-4 max-w-fit cursor-pointer">
               <IoNotifications className="w-6 h-6" />
               <span className="text-lg hidden md:block">Notifications</span>
-              {!(notificationsCount === 0) && (
+              {notificationsCount > 0 && (
                 <div className="bg-red-600 text-white rounded-full h-6 w-6 flex items-center justify-center font-bold">
                   {notificationsCount}
                 </div>
