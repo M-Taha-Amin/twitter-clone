@@ -1,0 +1,1 @@
+DELETE http://localhost:3000/api/posts/delete/66bd9314b85709dc05667ac2 HTTP/1.1

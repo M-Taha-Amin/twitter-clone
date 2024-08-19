@@ -1,0 +1,6 @@
+POST http://localhost:3000/api/posts/comment/66bda00ec2e9ebbc9b3fa72c HTTP/1.1
+Content-Type: application/json
+
+{
+  "text": "Bravo"
+}

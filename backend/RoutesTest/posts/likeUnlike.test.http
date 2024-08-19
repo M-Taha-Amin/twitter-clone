@@ -1,0 +1,3 @@
+POST http://localhost:3000/api/posts/like/66c2208fdb15860533c743ca HTTP/1.1
+ 
+

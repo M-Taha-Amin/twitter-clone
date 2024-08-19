@@ -1,0 +1,1 @@
+DELETE http://localhost:3000/api/notifications/delete/66be07d9e26448a0a66a7da7 HTTP/1.1

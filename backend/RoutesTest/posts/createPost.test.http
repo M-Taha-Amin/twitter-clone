@@ -1,0 +1,6 @@
+POST http://localhost:3000/api/posts/create HTTP/1.1
+Content-Type: application/json
+
+{
+  "text": "Hi I am user two. this is my first post"
+}
