@@ -163,11 +163,13 @@ const ProfilePage = () => {
                 {(coverImg || profileImg) && (
                   <button
                     className="btn btn-primary rounded-full btn-sm text-white px-4 ml-2"
-                    onClick={() => {
-                      updateProfile({
+                    onClick={async () => {
+                      await updateProfile({
                         coverImage: coverImg,
                         profileImage: profileImg,
                       });
+                      setCoverImg(null);
+                      setProfileImg(null);
                     }}>
                     {isUpdatingProfile ? (
                       <LoadingSpinner size="sm" />
