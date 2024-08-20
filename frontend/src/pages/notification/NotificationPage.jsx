@@ -22,6 +22,7 @@ const NotificationPage = () => {
           throw new Error(data.error || 'Something went wrong!');
         }
         loadingBarRef.current.complete();
+        console.log(data);
         queryClient.invalidateQueries({ queryKey: ['notificationsCount'] });
         return data;
       } catch (error) {
@@ -94,7 +95,7 @@ const NotificationPage = () => {
                   <div className="w-8 rounded-full">
                     <img
                       src={
-                        notification.from.profileImg ||
+                        notification.from.profileImage ||
                         '/avatar-placeholder.png'
                       }
                     />
